@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Weather-App-Mobile",
-    "slug": "Weather-App-Mobile",
+    "name": "weather-app-mobile",
+    "slug": "weather-app-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,6 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
