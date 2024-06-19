@@ -3,7 +3,7 @@ import React from "react";
 
 import { Image, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { SearchInput } from "../components";
+import { Forecast, SearchInput } from "../components";
 
 export default function HomeScreen() {
   return (
@@ -16,7 +16,7 @@ export default function HomeScreen() {
       />
       <SafeAreaView className="flex flex-1">
         <SearchInput />
-        
+        <Forecast />
       </SafeAreaView>
     </View>
   );
