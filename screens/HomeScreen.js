@@ -16,6 +16,7 @@ export default function HomeScreen() {
       />
       <SafeAreaView className="flex flex-1">
         <SearchInput />
+        
       </SafeAreaView>
     </View>
   );
