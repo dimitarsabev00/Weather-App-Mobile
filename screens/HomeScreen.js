@@ -1,16 +1,22 @@
+import { StatusBar } from "expo-status-bar";
 import React from "react";
 
-import { Text, View } from "react-native";
+import { Image, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { SearchInput } from "../components";
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView className="flex-1 relative align-center justify-center">
-      <View>
-        <Text className=" text-center font-bold uppercase">
-          Hello World!! Weather App Init!
-        </Text>
-      </View>
-    </SafeAreaView>
+    <View className="flex-1 relative">
+      <StatusBar style="light" />
+      <Image
+        blurRadius={70}
+        source={require("../assets/images/bg.png")}
+        className="absolute w-full h-full"
+      />
+      <SafeAreaView className="flex flex-1">
+        <SearchInput />
+      </SafeAreaView>
+    </View>
   );
 }
