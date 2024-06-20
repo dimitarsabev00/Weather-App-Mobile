@@ -1,27 +1,15 @@
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { MagnifyingGlassIcon, XMarkIcon } from "react-native-heroicons/outline";
 import { theme } from "../theme";
 import { MapPinIcon } from "react-native-heroicons/solid";
-import { debounce } from "lodash";
-import { fetchLocations } from "../api/weather";
-const SearchInput = () => {
-  const [showSearch, toggleSearch] = useState(false);
-  const [locations, setLocations] = useState([]);
-
-  const handleLocation = (loc) => {
-    console.log("location", loc);
-  };
-
-  const handleSearch = async (search) => {
-    if (search && search.length > 2) {
-      const data = await fetchLocations({ cityName: search });
-      setLocations(data);
-    }
-  };
-
-  const handleTextDebounce = useCallback(debounce(handleSearch, 1200), []);
-
+const SearchInput = ({
+  handleTextDebounce,
+  showSearch,
+  toggleSearch,
+  locations,
+  handleLocation
+}) => {
   return (
     <View style={{ height: "7%" }} className="mx-4 relative z-50">
       <View
